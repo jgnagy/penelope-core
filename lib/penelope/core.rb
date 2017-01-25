@@ -43,6 +43,7 @@ require "penelope/core/version"
 require 'penelope/core/job_report'
 require "penelope/core/job"
 require "penelope/core/git_job"
+require "penelope/core/run"
 
 # Setup the data store
 puts '>> Connecting to DB'

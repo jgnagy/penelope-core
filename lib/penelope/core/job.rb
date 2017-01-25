@@ -13,11 +13,6 @@ module Penelope
 
       has 1, :job_report
 
-      def self.perform(id)
-        job = get(id)
-        job.perform
-      end
-
       def cleanup
         # TODO archive working directory
         FileUtils.rm_rf working_directory
