@@ -2,7 +2,14 @@ sudo: false
 language: ruby
 rvm:
 - jruby-9.1.5.0
-before_install: gem update --system
+services:
+- mysql
+- redis
+before_install:
+- gem update --system
+- mysql -e 'CREATE DATABASE IF NOT EXISTS penelopedb;'
+env:
+- PENELOPE_DB_USER=root
 deploy:
   provider: rubygems
   api_key:
