@@ -1,8 +1,8 @@
 sudo: false
 language: ruby
 rvm:
-- 2.3.1
-before_install: gem install bundler -v 1.12.5
+- jruby-9.1.5.0
+before_install: gem update --system
 deploy:
   provider: rubygems
   api_key:
